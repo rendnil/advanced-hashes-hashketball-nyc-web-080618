@@ -149,6 +149,32 @@ def num_points_scored(player_name)
     end
   end
   player_points
+end
+
+def shoe_size(player_name)
+  
+  player_shoe_size = nil
+  game_hash.each do  |location, team_data|
+    
+    team_data.each do |attribute, data|
+      
+      if attribute == :players
+        data.each do |name, values|
+          
+          
+          if name == player_name
+            values.each do |stat, figure|
+              
+              if stat == :shoe
+                player_shoe_size = figure
+              end
+            end  
+          end  
+        end
+      end  
+    end
+  end
+  player_shoe_size
 end  
 
 puts num_points_scored("Bismak Biyombo")
