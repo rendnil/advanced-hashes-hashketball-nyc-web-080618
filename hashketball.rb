@@ -186,8 +186,7 @@ def team_colors(team_name)
      # binding.pry
      if team_data.values.include?(team_name) && attribute == :colors
         colors= data
-      if team_name == :team_name
-        colors = :colors
+      
           
         
       end  
