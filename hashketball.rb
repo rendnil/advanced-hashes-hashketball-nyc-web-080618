@@ -187,7 +187,7 @@ def team_colors(team_name)
       if attribute == :colors
         colors = data
           
-        end
+        
       end  
     end
   end
