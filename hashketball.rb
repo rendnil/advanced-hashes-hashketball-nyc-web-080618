@@ -241,6 +241,14 @@ end
 def big_shoe_rebounds()
 
 
+largest_shoe_size = nil
+largest_shoe_size_player = nil
+
+
+
+
+
+
 end
 
 ###########
