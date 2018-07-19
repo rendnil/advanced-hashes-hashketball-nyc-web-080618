@@ -183,7 +183,7 @@ def team_colors(team_name)
   game_hash.each do  |location, team_data|
     if team_data.keys.include?(team_name) == true
     team_data.each do |attribute, data|
-      
+      binding.pry
       if attribute == :colors
         colors = data
           
@@ -196,5 +196,6 @@ end
 
 
 ###########
+team_colors("Charlotte Hornets")
 #puts num_points_scored("Bismak Biyombo")
 #puts game_hash[:home][:players]["Reggie Evans"][:points]
