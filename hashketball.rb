@@ -250,7 +250,7 @@ game_hash.each do  |location, team_data|
         data.each do |name, values|
           player_names_array.push(name)
              
-          end  
+           
         end
       end  
     end
