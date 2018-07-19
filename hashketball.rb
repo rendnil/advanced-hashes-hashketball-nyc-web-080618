@@ -292,8 +292,3 @@ def big_shoe_rebounds()
 
 end
 
-###########
-print big_shoe_rebounds()
-#puts team_colors("Charlotte Hornets")
-#puts num_points_scored("Bismak Biyombo")
-#puts game_hash[:home][:players]["Reggie Evans"][:points]
