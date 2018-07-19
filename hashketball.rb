@@ -213,7 +213,6 @@ def player_numbers(team_name)
          stats.each do |stat, figure|
            if stat == :number
             jersey_array.push(figure)
-          
             end
           end
         end
@@ -221,6 +220,25 @@ def player_numbers(team_name)
     end
   end
   jersey_array
+end  
+
+def player_stats(player_name)
+ player_stats = { }
+  game_hash.each do  |location, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :players
+        data.each do |name, values|
+          if name == player_name
+            player_stats = values
+             
+          end  
+        end
+      end  
+    end
+  end
+  player_shoe_size
+  
+
 end  
 
 ###########
