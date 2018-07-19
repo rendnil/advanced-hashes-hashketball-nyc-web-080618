@@ -177,5 +177,24 @@ def shoe_size(player_name)
   player_shoe_size
 end  
 
-puts num_points_scored("Bismak Biyombo")
+def team_colors(team_name)
+  
+  colors = nil
+  game_hash.each do  |location, team_data|
+    
+    team_data.each do |attribute, data|
+      
+      if attribute == :colors
+        colors = data
+          
+        end
+      end  
+    end
+  end
+  colors
+end  
+
+
+###########
+#puts num_points_scored("Bismak Biyombo")
 #puts game_hash[:home][:players]["Reggie Evans"][:points]
