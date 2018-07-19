@@ -240,24 +240,29 @@ end
 
 def big_shoe_rebounds()
 
-shoe_size_hash = { }
+  shoe_size_hash = { }
 
-player_names_array = [ ]
-
-game_hash.each do  |location, team_data|
+  #populate an array of the player names
+  player_names_array = [ ]
+  game_hash.each do  |location, team_data|
     team_data.each do |attribute, data|
       if attribute == :players
         data.each do |name, values|
           player_names_array.push(name)
-             
-           
         end
       end  
     end
   end
 
+  player_names_array.each do |name|
+    shoe_size_hash[name] = shoe_size(name)
+    
+  end
+  
 
-puts player_names_array
+puts shoe_size_hash
+
+
 
 
 end
