@@ -196,6 +196,6 @@ end
 
 
 ###########
-team_colors("Charlotte Hornets")
+puts team_colors("Charlotte Hornets")
 #puts num_points_scored("Bismak Biyombo")
 #puts game_hash[:home][:players]["Reggie Evans"][:points]
