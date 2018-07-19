@@ -253,14 +253,18 @@ def big_shoe_rebounds()
       end  
     end
   end
-
+  
+  #create hash with names and sizes
   player_names_array.each do |name|
     shoe_size_hash[name] = shoe_size(name)
     
   end
   
 
-puts shoe_size_hash
+shoe_size_hash.max_by |name, shoe_size|
+  shoe_size
+
+  
 
 
 
@@ -268,7 +272,7 @@ puts shoe_size_hash
 end
 
 ###########
-big_shoe_rebounds()
+puts big_shoe_rebounds()
 #puts team_colors("Charlotte Hornets")
 #puts num_points_scored("Bismak Biyombo")
 #puts game_hash[:home][:players]["Reggie Evans"][:points]
