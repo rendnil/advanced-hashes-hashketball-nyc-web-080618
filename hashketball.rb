@@ -236,7 +236,7 @@ def player_stats(player_name)
       end  
     end
   end
-  player_shoe_size
+  player_stats
   
 
 end  
