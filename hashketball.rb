@@ -184,8 +184,8 @@ def team_colors(team_name)
     #if team_data.keys.include?(team_name) == true
     team_data.each do |attribute, data|
      # binding.pry
-      if team_name == :team_name.values()
-        colors = :colors.values()
+      if team_name == :team_name
+        colors = :colors
           
         
       end  
