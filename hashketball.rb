@@ -181,9 +181,7 @@ def team_colors(team_name)
   
   colors = nil
   game_hash.each do  |location, team_data|
-    #if team_data.keys.include?(team_name) == true
     team_data.each do |attribute, data|
-     # binding.pry
      if team_data.values.include?(team_name) && attribute == :colors
         colors= data
       end  
@@ -194,7 +192,6 @@ end
 
 
 def team_names()
-
   team_name_array = [ ]
   game_hash.each do |location, team_data|
     team_data.each do |attribute, data|
@@ -202,10 +199,28 @@ def team_names()
         team_name_array.push(data)
       end
     end  
-  
-  
   end  
   team_name_array
+end  
+
+def player_numbers(team_name)
+  jersey_array = [ ]
+  
+  game_hash.each do  |location, team_data|
+    team_data.each do |attribute, data|
+     if team_data.values.include?(team_name) && attribute == :players
+       players.each do |player_name, stats|
+         stats.each do |stat, figure|
+           if stat == :number
+            jersey_array.push(figure)
+          
+            end
+          end
+        end
+      end
+    end
+  end
+  jersey_array
 end  
 
 ###########
