@@ -193,6 +193,21 @@ def team_colors(team_name)
 end  
 
 
+def team_names()
+
+  team_name_array = [ ]
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :team_name
+        team_name_array.push(data)
+      end
+    end  
+  
+  
+  end  
+  team_name_array
+end  
+
 ###########
 puts team_colors("Charlotte Hornets")
 #puts num_points_scored("Bismak Biyombo")
