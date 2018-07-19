@@ -260,12 +260,33 @@ def big_shoe_rebounds()
     
   end
   
-
+  #return player's name with max shoe size
   player_name = shoe_size_hash.max_by { |name, shoe_size|  shoe_size}[0]
     
-  
+  #get number of rebounds with this name  
 
-
+  player_rebounds = nil
+  game_hash.each do  |location, team_data|
+    
+    team_data.each do |attribute, data|
+      
+      if attribute == :players
+        data.each do |name, values|
+          
+          
+          if name == player_name
+            values.each do |stat, figure|
+              
+              if stat == :rebounds
+                player_rebounds = figure
+              end
+            end  
+          end  
+        end
+      end  
+    end
+  end
+  player_rebounds
 
 
 
