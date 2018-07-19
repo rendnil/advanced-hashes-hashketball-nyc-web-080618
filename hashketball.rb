@@ -261,8 +261,8 @@ def big_shoe_rebounds()
   end
   
 
-  shoe_size_hash.max_by |name, shoe_size|
-    shoe_size
+  shoe_size_hash.max_by { |name, shoe_size|  shoe_size}
+    
   
 
 
