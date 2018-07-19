@@ -240,20 +240,16 @@ end
 
 def big_shoe_rebounds()
 
+shoe_size_hash = { }
 
-largest_shoe_size = nil
-largest_shoe_size_player = nil
+player_names_array = [ ]
 
 game_hash.each do  |location, team_data|
     team_data.each do |attribute, data|
       if attribute == :players
         data.each do |name, values|
-          if name == player_name
-            values.each do |stat, figure|
-              if stat == :points
-                player_points = figure
-              end
-            end  
+          player_names_array.push(name)
+             
           end  
         end
       end  
@@ -261,12 +257,13 @@ game_hash.each do  |location, team_data|
   end
 
 
-
+puts player_names_array
 
 
 end
 
 ###########
-puts team_colors("Charlotte Hornets")
+big_shoe_rebounds()
+#puts team_colors("Charlotte Hornets")
 #puts num_points_scored("Bismak Biyombo")
 #puts game_hash[:home][:players]["Reggie Evans"][:points]
