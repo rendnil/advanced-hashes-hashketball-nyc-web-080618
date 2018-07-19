@@ -209,7 +209,7 @@ def player_numbers(team_name)
   game_hash.each do  |location, team_data|
     team_data.each do |attribute, data|
      if team_data.values.include?(team_name) && attribute == :players
-       players.each do |player_name, stats|
+       data.each do |player_name, stats|
          stats.each do |stat, figure|
            if stat == :number
             jersey_array.push(figure)
