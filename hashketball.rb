@@ -230,16 +230,18 @@ def player_stats(player_name)
         data.each do |name, values|
           if name == player_name
             player_stats = values
-             
           end  
         end
       end  
     end
   end
   player_stats
-  
-
 end  
+
+def big_shoe_rebounds()
+
+
+end
 
 ###########
 puts team_colors("Charlotte Hornets")
